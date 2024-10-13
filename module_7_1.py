@@ -8,7 +8,7 @@ class Shop:
         return product
 
     def add(self, *products):
-        file1 = open(self.__file_name, 'r+')
+        file1 = open(self.__file_name, 'a')
         for product in products:
             if str(product) in self.get_products():
                 print(f"Продукт {str(product)} уже есть в магазине")
